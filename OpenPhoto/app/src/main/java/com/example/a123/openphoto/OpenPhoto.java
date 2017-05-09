@@ -16,16 +16,16 @@ import java.io.FileNotFoundException;
  * Created by 123 on 2017/5/7.
  */
 
-        public class OpenPhoto {
-            public Intent Open() {
-                Intent intent = new Intent();
-                intent.setType("image/*");
-                intent.setAction(Intent.ACTION_GET_CONTENT);
-                return intent;
-            }
+public class OpenPhoto {
+    public Intent Open() {
+        Intent intent = new Intent();
+        intent.setType("image/*");
+        intent.setAction(Intent.ACTION_GET_CONTENT);
+        return intent;
+    }
 
-            public Bitmap ScalePic(Bitmap bitmap, int phone) {
-                //縮放比例預設為1
+    public Bitmap ScalePic(Bitmap bitmap, int phone) {
+        //縮放比例預設為1
         float mScale = 1;
         //如果圖片寬度大於手機寬度則進行縮放，否則直接將圖片放入ImageView內
         if (bitmap.getWidth() > phone) {

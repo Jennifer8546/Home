@@ -9,25 +9,20 @@ import android.util.DisplayMetrics;
 import android.util.Log;
 import android.widget.ImageView;
 
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
+    import com.google.firebase.database.DataSnapshot;
+    import com.google.firebase.database.DatabaseError;
+    import com.google.firebase.database.DatabaseReference;
+    import com.google.firebase.database.FirebaseDatabase;
+    import com.google.firebase.database.ValueEventListener;
 
-public class MainActivity extends AppCompatActivity {
-    OpenPhoto openPhoto;
+    public class MainActivity extends AppCompatActivity {
+        OpenPhoto openPhoto;
     ImageView imageView;
     DisplayMetrics metrics;
     private static int CAMERA;
     private static int PHOTO;
     FirebaseDatabase database;
     DatabaseReference myRef;
-    /**
-     * ATTENTION: This was auto-generated to implement the App Indexing API.
-     * See https://g.co/AppIndexing/AndroidStudio for more information.
-     */
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,7 +39,8 @@ public class MainActivity extends AppCompatActivity {
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                Log.d("Debug", dataSnapshot.getValue() + "");
+                String value = dataSnapshot.getValue(String.class);
+                imageView.setImageBitmap(Uitlity.StringToBitmap(value));
             }
 
             @Override

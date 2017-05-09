@@ -103,6 +103,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "1090961810573-5jgg82cfs7fts2b7t8tabiddivoq8s5b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.a123.openphoto",
+            "certificate_hash": "f088304e317a835da316f5dd60ac093235664160"
+          }
+        },
+        {
           "client_id": "1090961810573-khcrh5u2nrgavul0a75gpv0d60qg46cp.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
